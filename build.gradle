@@ -32,7 +32,3 @@ tasks.named('test') {
 jar {
 	enabled = false
 }
-
-bootJar {
-	mainClassName = 'com.example.todo'
-}
