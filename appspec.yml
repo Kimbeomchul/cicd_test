@@ -7,10 +7,9 @@ files:
     overwrite: yes
 
 permissions:
-  - object: /home/ubuntu/app/scripts/deploy.sh
+  - object: /home/ubuntu/app/
     owner: ubuntu
     group: ubuntu
-    mode: 755
 
 hooks:
   ApplicationStart:

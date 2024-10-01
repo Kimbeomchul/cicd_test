@@ -8,7 +8,7 @@ public class TodoController {
 
     // test
     @GetMapping("/")
-    public void test(){
-        //tt
+    public String test(){
+        return "FIN";
     }
 }
