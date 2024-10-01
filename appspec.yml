@@ -7,11 +7,13 @@ files:
     overwrite: yes
 
 permissions:
-  - object: /
+  - object: /home/ubuntu/app/scripts/deploy.sh
     owner: ubuntu
     group: ubuntu
+    mode: 755
 
 hooks:
   ApplicationStart:
     - location: scripts/deploy.sh
       timeout: 60
+      runas: ubuntu
