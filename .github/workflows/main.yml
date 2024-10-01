@@ -8,9 +8,9 @@ on:
 
 env:
   AWS_REGION: ap-northeast-2
-  AWS_S3_BUCKET: gitget-deploy-bucket
-  AWS_CODE_DEPLOY_APPLICATION: GitGet-Application-CD
-  AWS_CODE_DEPLOY_GROUP: GitGet-Deployment-Group
+  AWS_S3_BUCKET: git-deploy-bucket-ec2
+  AWS_CODE_DEPLOY_APPLICATION: Git-CodeDeploy-Cd
+  AWS_CODE_DEPLOY_GROUP: GIT-Deploy_Group
 
 jobs:
   deploy:
@@ -32,9 +32,7 @@ jobs:
           mkdir -p ./src/main/resources
           cd ./src/main/resources
           touch ./application.yml
-          touch ./application-prod.yml
           echo "${{ secrets.APPLICATION }}" > ./application.yml
-          echo "${{ secrets.PROD }}" > ./application-prod.yml
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
