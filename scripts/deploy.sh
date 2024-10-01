@@ -5,7 +5,7 @@ JAR_NAME=$(basename $BUILD_JAR)
 echo "#### 파일명: $JAR_NAME" >> /home/ubuntu/deploy.log
 
 echo "#### 파일 복사" >> /home/ubuntu/deploy.log
-DEPLOY_PATH=/home/ubuntu/app/
+DEPLOY_PATH=/home/ubuntu/app/build/libs/
 cp $BUILD_JAR $DEPLOY_PATH
 
 echo "#### pid" >> /home/ubuntu/deploy.log
